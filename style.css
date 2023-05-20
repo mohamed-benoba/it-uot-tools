@@ -4,11 +4,12 @@
 body {
   direction: rtl;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
+  margin: 32px 16px 32px 0;
 }
 
 .form-style {
   position: relative;
-  background-color: #F5F6F8;
+  /* background-color: #F5F6F8; */
   padding: 16px 8px;
   margin: 8px 2px;
   border-radius: 32px;
@@ -28,7 +29,7 @@ tbody tr:first-child {
 
 .tabs {
   display: inline-block;
-  padding: 10px;
+  padding: 4px 0 12px;
 }
 
 .tab {
@@ -39,6 +40,19 @@ tbody tr:first-child {
   cursor: pointer;
 }
 
+.tabs :first-child {
+  margin-right: 0 !important;
+}
+
 .tab.active {
   background-color: #ccc;
+}
+
+#searchInput {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  width: 320px;
+  padding: 12px 8px;
+  text-indent: 12px;
+  border-radius: 32px;
+  border: 1px solid rgb(204 206 214)
 }
