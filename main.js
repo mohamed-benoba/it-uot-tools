@@ -174,9 +174,8 @@ function filterBasedOnSearchClick() {
   const searchResults = document.getElementById('searchResults');
   searchInput.value = tab.textContent;
   searchResults.textContent = ''
-  sear
   // Programmatically trigger a real click event
-tab.click()
+  tab.click()
 }
 
 const searchInput = document.getElementById('searchInput');
