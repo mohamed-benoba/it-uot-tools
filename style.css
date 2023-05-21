@@ -5,6 +5,7 @@ body {
   direction: rtl;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   margin: 32px 16px 32px 0;
+  width: 5000px;
 }
 
 .form-style {
