@@ -147,7 +147,7 @@ function displayResults(results) {
   searchResults.innerHTML = '';
 
   if (results.length === 0) {
-    searchResults.innerHTML = '<p>لا يوجد أي نتائج، تحقق من صحة اسم المادة.</p>';
+    searchResults.innerHTML = '<ul>لا يوجد أي نتائج، تحقق من صحة اسم المادة.</ul>';
     return;
   }
   if (searchInput.value.length === 0) {
