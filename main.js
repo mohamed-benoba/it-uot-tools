@@ -154,7 +154,7 @@ function displayResults(results) {
   console.log()
   console.log()
   if (searchInput.value.length === 0) {
-    searchResults.innerHTML = '<p></p>';
+    searchResults.innerHTML = '';
     return;
   }
 

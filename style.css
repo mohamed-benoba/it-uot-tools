@@ -27,6 +27,16 @@ tbody tr:first-child {
   white-space: nowrap;
 }
 
+/* .tab-container::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-container {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+} 
+*/
+
 .tabs {
   display: inline-block;
   padding: 4px 0 12px;
@@ -54,5 +64,15 @@ tbody tr:first-child {
   padding: 12px 8px;
   text-indent: 12px;
   border-radius: 32px;
-  border: 1px solid rgb(204 206 214)
+  border: 1px solid rgb(204 206 214);
+  margin-bottom: 16px;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+.semester {
+  margin-bottom: 28px;
+  opacity: .7;
 }
