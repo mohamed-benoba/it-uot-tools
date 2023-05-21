@@ -3,9 +3,11 @@
   Note (20/5/2023): This code is a legacy a code and needs to be refactored 
 */
 
+
 const paragraphsWithTitle = document.querySelectorAll('p[title]');
 const tabsContainer = document.getElementById('tabs');
 const tabContent = document.querySelector('.tab-content');
+
 
 // Create all first tab
 allTab();
@@ -39,8 +41,9 @@ uniqueParagraphs.forEach((paragraph, index) => {
   tab.textContent = title;
   tab.setAttribute('name', title);
 
+  tab.addEventListener('click', scrollToTab);
   // Add click event listener to the tab
-  tab.addEventListener('click', () => {
+  tab.addEventListener('click', (calledFrom) => {
     // Remove 'active' class from all tabs
     const tabs = document.querySelectorAll('.tab');
     tabs.forEach(tab => tab.classList.remove('active'));
@@ -50,6 +53,9 @@ uniqueParagraphs.forEach((paragraph, index) => {
     
     // Scroll the tab container to bring the clicked tab into view
     tabsContainer.scrollLeft = tab.offsetLeft;
+
+    // Remove search value when press tab, isTrusted means that user didn't click on it but from code
+    if(calledFrom.isTrusted == true) searchInput.value = '';
 
     // Update the content based on the selected tab
     let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -147,7 +153,7 @@ function displayResults(results) {
   searchResults.innerHTML = '';
 
   if (results.length === 0) {
-    searchResults.innerHTML = '<ul>لا يوجد أي نتائج، تحقق من صحة اسم المادة.</ul>';
+    searchResults.innerHTML = '<ul>لا يوجد أي نتائج، تحقق من عدم وجود خطأ إملائي.</ul>';
     return;
   }
   if (searchInput.value.length === 0) {
@@ -180,3 +186,20 @@ function filterBasedOnSearchClick() {
 
 const searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('input', search);
+
+function scrollToTab(event) {
+  var tab = event.target;
+  console.log(tab)
+  var tabRect = tab.getBoundingClientRect();
+  // Calculate the scroll position to center the selected tab
+  console.log('tabRect')
+  console.log(tabRect.left)
+  var scrollLeft;
+  var tabsContainer = document.querySelector('.tab-container');
+  if(tabsContainer.offsetWidth > tabRect.width){
+    scrollLeft = tabRect.left + tabsContainer.scrollLeft - (tabsContainer.offsetWidth - tabRect.width) / 2;
+  } else {
+    scrollLeft = tabRect.left + tabsContainer.scrollLeft;
+  }
+  tabsContainer.scrollLeft = scrollLeft; 
+}
