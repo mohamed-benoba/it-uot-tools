@@ -4,7 +4,7 @@
 body {
   direction: rtl;
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  margin: 32px 16px 32px 0;
+  margin: 32px 0
 }
 
 .form-style {
@@ -22,12 +22,23 @@ tbody tr:first-child {
   width: 100%;
 }
 
+
+.form-style {
+  margin: 32px ;
+  padding: 0;
+}
+
 .tab-container {
   overflow-x: scroll;
   white-space: nowrap;
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  margin-right: 32px;
+}
+
+.container {
+  margin: 0 32px;
 }
 
 
