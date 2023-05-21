@@ -6,6 +6,9 @@ body {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   margin: 32px 16px 32px 0;
 }
+.semester {
+  margin-left: 16px;
+}
 
 .form-style {
   position: relative;
