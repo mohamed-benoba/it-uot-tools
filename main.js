@@ -3,6 +3,10 @@
   Note (20/5/2023): This code is a legacy a code and needs to be refactored 
 */
 
+// set scrolling to right when user enter site first time
+window.onload = function() {
+  window.scrollTo(document.body.scrollWidth, 0);
+}
 
 const paragraphsWithTitle = document.querySelectorAll('p[title]');
 const tabsContainer = document.getElementById('tabs');
