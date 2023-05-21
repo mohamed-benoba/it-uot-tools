@@ -147,12 +147,9 @@ function displayResults(results) {
   searchResults.innerHTML = '';
 
   if (results.length === 0) {
-    searchResults.innerHTML = '<p>No results found.</p>';
+    searchResults.innerHTML = '<p>لا يوجد أي نتائج، تحقق من صحة اسم المادة.</p>';
     return;
   }
-  console.log('h')
-  console.log()
-  console.log()
   if (searchInput.value.length === 0) {
     searchResults.innerHTML = '';
     return;
@@ -173,7 +170,11 @@ const tabs = document.querySelector('.tabs');
 function filterBasedOnSearchClick() {
 
   const tab = document.querySelector(`.tabs .tab[name="${this.textContent}"]`);
-  console.log(tab)
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  searchInput.value = tab.textContent;
+  searchResults.textContent = ''
+  sear
   // Programmatically trigger a real click event
 tab.click()
 }
