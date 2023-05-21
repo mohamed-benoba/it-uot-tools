@@ -103,7 +103,7 @@ initialTab.classList.add('active');
 function allTab() {
   const tab = document.createElement('div');
   tab.className = 'tab';
-  tab.textContent = 'الكل';
+  tab.textContent = 'جميع المواد';
   tabsContainer.appendChild(tab);
 
   tab.addEventListener('click', () => {
