@@ -94,8 +94,10 @@ function showSubjectsRelatedToTab(selectedSubjectName) {
 
 function handleTabsStyleAndRareCases(e, tab) {
   // Remove 'active' class from all tabs
-  dataModule.tabs.forEach(tab => tab.classList.remove('active'));
-
+  let tabs = document.querySelectorAll('.tab')
+  tabs.forEach(tab => {
+    tab.classList.remove('active')
+  });
   // Add 'active' class to the clicked tab
   tab.classList.add('active');
 

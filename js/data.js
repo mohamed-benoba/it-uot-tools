@@ -14,7 +14,6 @@ export const subjects = [];
 const uniqueTitles = new Set();
 
 paragraphsWithTitle.forEach((paragraph) => {
-  console.log(paragraph)
   const title = paragraph.title;
   if (!uniqueTitles.has(title)) {
     uniqueTitles.add(title);
@@ -39,9 +38,5 @@ paragraphsWithTitle.forEach((paragraph) => {
     });
   }
 });
-
-subjects.forEach(sub => {
-  console.log(sub.name)
-})
 
 // function getSubjectDepartment
