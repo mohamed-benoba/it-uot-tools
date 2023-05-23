@@ -143,3 +143,9 @@ h1 {
   margin-bottom: 28px;
   opacity: .7;
 }
+
+.link {
+  color: rgb(0, 119, 255);
+  text-decoration: underline;
+  cursor: pointer;
+}
