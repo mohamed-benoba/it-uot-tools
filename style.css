@@ -10,7 +10,7 @@ body {
   margin-left: 16px;
 }
 
-.form-style {
+.form-horizontal {
   position: relative;
   /* background-color: #F5F6F8; */
   padding: 16px 8px;
