@@ -6,7 +6,7 @@ export function search() {
   const results = [];
   dataModule.subjects.forEach((title) => {
     const titleText = title.name.toLowerCase();
-    if (titleText.includes(searchInput)) {
+    if (titleText.replace(/[أإ]/g, 'ا').includes(searchInput.replace(/[أإ]/g, 'ا'))) {
       results.push(title.name);
     }
   });
