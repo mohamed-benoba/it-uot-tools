@@ -14,10 +14,10 @@ document.querySelector('.overlay').addEventListener('click', () => {
   dialog.style.display = 'none';
 })
 
-document.querySelector('.body').addEventListener('click', () => {
-  var dialog = document.querySelector('.overlay');
-  dialog.style.display = 'none';
-})
+// document.querySelector('.body').addEventListener('click', () => {
+//   var dialog = document.querySelector('.overlay');
+//   dialog.style.display = 'none';
+// })
 
 document.querySelector('.close-dialog').addEventListener('click', () => {
   var dialog = document.querySelector('.overlay');
