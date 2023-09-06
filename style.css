@@ -9,6 +9,23 @@ body {
   margin: 0;
   position: relative;
 }
+
+.button {
+  background-color: rgb(25, 102, 255);
+  padding: 12px 32px;
+  border-radius: 100px;
+  margin-top: 36px;
+  color: white;
+  width: 80%;
+  max-width: 300px;
+  box-shadow: -1px 3px 12px #dadada;
+}
+
+.button:hover {
+  opacity: .9;
+  cursor: pointer;
+}
+
 .semester {
   margin-left: 16px;
 }
